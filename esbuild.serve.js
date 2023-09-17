@@ -1,6 +1,7 @@
 import esbuild from 'esbuild';
 import htmlPlugin from '@chialab/esbuild-plugin-html';
 import { sassPlugin } from 'esbuild-sass-plugin'
+import { solidPlugin } from 'esbuild-plugin-solid';
 import { copy } from 'esbuild-plugin-copy';
 
 let ctx = await esbuild.context({
@@ -14,7 +15,8 @@ let ctx = await esbuild.context({
       },
       watch: true,
     }),
-    sassPlugin()
+    sassPlugin(),
+    solidPlugin()
   ],
   outdir: 'dist',
   bundle: true,

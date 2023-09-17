@@ -1,6 +1,7 @@
 import esbuild from 'esbuild';
 import htmlPlugin from '@chialab/esbuild-plugin-html';
 import { sassPlugin } from 'esbuild-sass-plugin'
+import { solidPlugin } from 'esbuild-plugin-solid';
 import { copy } from 'esbuild-plugin-copy';
 
 // build mode
@@ -15,7 +16,8 @@ console.log(
           from: ['./src/assets/*'],
         },
       }),
-      sassPlugin()
+      sassPlugin(),
+      solidPlugin()
     ],
     outdir: 'dist',
     bundle: true,
