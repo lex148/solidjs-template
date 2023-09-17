@@ -1,0 +1,22 @@
+{
+  "name": "web_template",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node esbuild.serve.js",
+    "build:prod:esbuild": "node esbuild.build.production.js",
+    "build:dev:esbuild": "node esbuild.build.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@chialab/esbuild-plugin-html": "^0.17.3",
+    "esbuild": "^0.19.3",
+    "esbuild-plugin-copy": "^2.1.1",
+    "esbuild-sass-plugin": "^2.15.0",
+    "sass": "^1.67.0",
+    "typescript": "^5.2.2"
+  }
+}
